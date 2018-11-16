@@ -85,7 +85,7 @@ public class ASHDatabasePG90 extends ASHDatabase {
      */
     private String queryASH = "SELECT current_timestamp as current_timestamp, datid, datname, procpid as pid, usesysid, "
 		+ "coalesce(usename, 'unknown') as usename, application_name, "
-		+ "coalesce(client_addr::text, client_addr::text, 'localhost') as client_hostname, "
+		+ "coalesce(client_addr::text, 'localhost') as client_hostname, "
 		+ "waiting::int as waiting, current_query as query, "
 		+ "coalesce(query_start, xact_start, backend_start) as query_start, "
 		+ "1000 * EXTRACT(EPOCH FROM (clock_timestamp()-coalesce(query_start, xact_start, backend_start))) as duration, "
