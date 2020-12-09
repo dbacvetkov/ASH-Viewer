@@ -335,8 +335,14 @@ public class MainFrame extends JFrame implements ActionListener{
 
 		String versionOracleDB = model.getVersionDB();
 		Boolean ASHsupport = model.getASHsupport();
-
-		if (versionOracleDB.startsWith("11")) {
+		if (versionOracleDB.startsWith("12")) {
+			if(ASHsupport) {
+				this.database = new ASHDatabasePG12ASH(this.model);
+			} else {
+				this.database = new ASHDatabasePG12(this.model);
+			}
+		}
+		else if (versionOracleDB.startsWith("11")) {
 			if(ASHsupport) {
 				this.database = new ASHDatabasePG10ASH(this.model);
 			} else {

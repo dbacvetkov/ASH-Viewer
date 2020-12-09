@@ -11,6 +11,9 @@
   The default capture rate is one snapshot every 1 seconds.
   PASH Viewer support PostgreSQL 10+ (and 9.4 - 9.6 with limited functions).
   
+  PASH Viewer now support PostgreSQL 12 as well. 
+  SSL Connections are supported as well.
+  
   Read how it works: https://github.com/dbacvetkov/PASH-Viewer/wiki
 
   Use superuser (postgres) to connect to DB, if you want to see query plans.
@@ -52,4 +55,4 @@
 
    PASH Viewer URL
    ----------
-   https://github.com/dbacvetkov/PASH-Viewer
+   https://github.com/stopitallready/PASH-Viewer
